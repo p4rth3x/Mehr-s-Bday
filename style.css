@@ -1,0 +1,248 @@
+/* General Page Style */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e4f3ff;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Game Area */
+  #game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('bg-stars.png') repeat;
+  }
+  
+  /* Bag Styling */
+  #bag {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    transition: left 0.2s ease;
+  }
+  
+  /* Falling Photos */
+  .photo {
+    position: absolute;
+    top: -150px;
+    width: 90px;
+    transition: top 0.1s ease;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Counter Display */
+  #counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    color: #2d3436;
+    z-index: 10;
+  }
+  
+  /* Header for optional messages */
+  #header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3b3b98;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Collage Page Styling */
+  #collage {
+    text-align: center;
+    padding-top: 100px;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  #collage h1 {
+    font-size: 2.5em;
+    color: #4b7bec;
+  }
+  
+  /* Grid for the photo collage */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Confetti Canvas */
+  #confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  /* Buttons */
+  #nextButton {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4b7bec;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #nextButton:hover {
+    background-color: #3867d6;
+  }
+  
+  /* General Memory Page */
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f4f6fc;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .photo-small {
+    max-width: 520px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .photo-large {
+    max-width: 320px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 20px auto;
+  }
+  
+  
+  .caption {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .next-btn {
+    margin-top: 40px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #4b7bec;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+
+  }
+  
+
+  .video-player {
+    max-width: 90%;
+    max-height: 80vh;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  
+
+  .next-btn:hover {
+    background-color: #3867d6;
+  }
+  /* Only for rotating the first photo */
+.rotate90 {
+    transform: rotate(360deg) scale(0.9);
+  }
+  /* Video Page Specific */
+.video-heading {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.video-player {
+  width: 80%;
+  max-width: 720px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Button Style */
+.back-btn {
+  margin-top: 40px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #d1d8e0;
+  color: #2d3436;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #a4b0be;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

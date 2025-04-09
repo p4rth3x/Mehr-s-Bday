@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>US Presidents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Load music -->
+  <audio id="page3Music" src="page3-music.mp3" loop></audio>
+
+  <div class="page">
+    <img src="photo10.JPG" alt="Presidential Moments" class="photo-large" />
+    <p class="caption">To being listed in the book of all the US presidents,<br> you’ve done it all.</p>
+    <button class="next-btn" onclick="window.location.href='page4.html'">Next 🎬</button>
+  </div>
+
+  <script>
+    const music = document.getElementById("page3Music");
+    function startMusic() {
+      music.play().catch(e => console.log("Music blocked"));
+      document.removeEventListener("click", startMusic);
+      document.removeEventListener("keydown", startMusic);
+    }
+    document.addEventListener("click", startMusic);
+    document.addEventListener("keydown", startMusic);
+  </script>
+</body>
+</html>

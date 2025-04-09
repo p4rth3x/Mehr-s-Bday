@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Collector 🎒</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game">
+    <div id="counter">Photos Collected: 0 / 5</div>
+    <div id="header">Move with the arrow keys</div>
+    <img src="Bag.png" id="bag" />
+  </div>
+
+  <div id="collage" class="hidden">
+    <h1>✨ Memories Caught ✨</h1>
+    <div class="grid" id="collageGrid"></div>
+    <button id="nextButton" class="hidden">Next ➜</button>
+    <canvas id="confetti-canvas"></canvas>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="gameMusic" src="game-music.mp3" loop></audio>
+
+  <!-- Confetti & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    // Wait for user to interact before playing music
+    const gameMusic = document.getElementById("gameMusic");
+    const playMusic = () => {
+      gameMusic.play().catch(err => console.log("Autoplay blocked:", err));
+    };
+    window.addEventListener("click", playMusic, { once: true });
+    window.addEventListener("keydown", playMusic, { once: true });
+  </script>
+</body>
+</html>

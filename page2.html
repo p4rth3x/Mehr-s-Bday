@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>From the Gang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <img src="photo9.JPG" class="photo-small" alt="From the gang" />
+    <div class="caption">From being a part of the gang</div>
+    <button class="next-btn" onclick="window.location.href='page3.html'">Next ➡️</button>
+  </div>
+
+  <!-- Page 2 Music -->
+  <audio id="page2Music" src="page2-music.mp3" loop></audio>
+
+  <script>
+    const page2Music = document.getElementById("page2Music");
+    const playMusic = () => {
+      page2Music.play().catch(err => console.log("Autoplay blocked:", err));
+    };
+    window.addEventListener("click", playMusic, { once: true });
+    window.addEventListener("keydown", playMusic, { once: true });
+  </script>
+</body>
+</html>
